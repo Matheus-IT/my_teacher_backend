@@ -5,7 +5,7 @@ from rest_framework import status
 from app.serializers import TeacherSerializer
 from .models import Teacher
 
-class HomeApiView(APIView):
+class TeacherApiView(APIView):
     def get(self, request, format=None):
         teachers = Teacher.objects.all()
         serializer = TeacherSerializer(teachers, many=True)
